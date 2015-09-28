@@ -1,0 +1,86 @@
+﻿@using UncleBuck.Common
+@model Customer
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div ng-app="uncleApp">
+    <div ng-controller="addUpdateCustomer">
+        <br />
+        <div>
+            <a href="" class="btn btn-primary">Add new Customer</a>
+        </div>
+        <br/>
+
+        <div class="form" role="form">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>Title*</label>
+                            @Html.EnumDropDownListFor(m=>m.PersonalDetails.Title,new{@class="form-control"})
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>First Name*</label>
+                            <input required type="text" value="" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>Middle Name</label>
+                            <input type="text" value="" class="form-control"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>Surname*</label>
+                            <input type="text" value="" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>Email*</label>
+                            <input type="text" value="" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>Confirm Email*</label>
+                            <input type="text" value="" class="form-control"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>Marital Status*</label>
+                            @Html.EditorFor(m => m.PersonalDetails.MaritalStatuses, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>Date of Birth*</label>
+                            <input type="text" value="" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>Dependants*</label>
+                            <select class="form-control">
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
