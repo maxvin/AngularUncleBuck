@@ -59,7 +59,7 @@
                     <div class="col-sm-4">
                         <div class="form-group">
                             <label>Marital Status*</label>
-                            @Html.EditorFor(m => m.PersonalDetails.MaritalStatuses, new { @class = "form-control" })
+                            @Html.EnumDropDownListFor(m => m.PersonalDetails.MaritalStatuses, new { @class = "form-control" })
                         </div>
                     </div>
                     <div class="col-sm-4">
@@ -72,10 +72,10 @@
                         <div class="form-group">
                             <label>Dependants*</label>
                             <select class="form-control">
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
+                                @for (int i = 0; i <= 10; i++)
+                                {
+                                    <option value="@i">@i</option>
+                                }
                             </select>
                         </div>
                     </div>

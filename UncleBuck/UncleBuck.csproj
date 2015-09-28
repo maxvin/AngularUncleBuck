@@ -129,7 +129,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Common\CustomMetadataProvider.cs" />
     <Compile Include="Common\dbContext.cs" />
     <Compile Include="Common\Entities.cs" />
     <Compile Include="Controllers\CustomersController.cs" />

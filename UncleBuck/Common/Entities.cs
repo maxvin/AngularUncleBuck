@@ -29,6 +29,7 @@ namespace UncleBuck.Common
         Single,
         Divorced,
         Widowed,
+        [Display(Name = "Living Together")]
         LivingTogether,
         Separated,
         Other
@@ -278,7 +279,6 @@ namespace UncleBuck.Common
 
     public class PersonalDetails
     {
-
         public Titles Title { get; set; }
 
         public string FirstName { get; set; }
